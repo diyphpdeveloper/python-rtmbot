@@ -68,7 +68,7 @@ class RtmBot(object):
 
     def connect(self):
         """Convenience method that creates Server instance"""
-        self.slack_client.rtm_connect()
+        self.slack_client.rtm_connect(with_team_state=False, auto_reconnect=True)
 
     def _start(self):
         self.connect()
